@@ -9,6 +9,7 @@ const admin = [
 const employees = [
   {
     id: 1,
+    firstName: "John",
     email: "employee1@example.com",
     password: "123",
     tasks: [
@@ -45,9 +46,16 @@ const employees = [
         category: "Training",
       },
     ],
+    taskStats: {
+      active: 3,
+      newTask: 2,
+      completed: 1,
+      failed: 0,
+    },
   },
   {
     id: 2,
+    firstName: "Alice",
     email: "employee2@example.com",
     password: "123",
     tasks: [
@@ -85,9 +93,16 @@ const employees = [
         category: "Development",
       },
     ],
+    taskStats: {
+      active: 3,
+      newTask: 2,
+      completed: 1,
+      failed: 1,
+    },
   },
   {
     id: 3,
+    firstName: "David",
     email: "employee3@example.com",
     password: "123",
     tasks: [
@@ -123,9 +138,16 @@ const employees = [
         category: "Marketing",
       },
     ],
+    taskStats: {
+      active: 3,
+      newTask: 2,
+      completed: 1,
+      failed: 0,
+    },
   },
   {
     id: 4,
+    firstName: "Emma",
     email: "employee4@example.com",
     password: "123",
     tasks: [
@@ -163,9 +185,16 @@ const employees = [
         category: "Documentation",
       },
     ],
+    taskStats: {
+      active: 3,
+      newTask: 2,
+      completed: 0,
+      failed: 1,
+    },
   },
   {
     id: 5,
+    firstName: "Sophia",
     email: "employee5@example.com",
     password: "123",
     tasks: [
@@ -203,6 +232,12 @@ const employees = [
         category: "Quality Assurance",
       },
     ],
+    taskStats: {
+      active: 3,
+      newTask: 2,
+      completed: 0,
+      failed: 0,
+    },
   },
 ];
 

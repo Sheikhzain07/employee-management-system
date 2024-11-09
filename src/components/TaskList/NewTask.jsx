@@ -13,7 +13,9 @@ const NewTask = () => {
         perferendis ratione excepturi cupiditate vitae maiores?
       </p>
       <div className="mt-4">
-        <button>Accept Task</button>
+        <button className="bg-blue-500 py-1 px-2 text-sm rounded-sm">
+          Accept Task
+        </button>
       </div>
     </div>
   );

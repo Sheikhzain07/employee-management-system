@@ -7,16 +7,35 @@ const CreateTask = () => {
   const [category, setCategory] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
 
+  const [newTask, setNewTask] = useState({});
+
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(
-      "submitted task",
+
+    setNewTask({
       taskTitle,
       taskDescription,
       taskDate,
       taskAssignTo,
-      category
-    );
+      category,
+      active: false,
+      newTask: true,
+      completed: false,
+      failed: false,
+    });
+
+    const data = JSON.parse(localStorage.getItem("employees"));
+    data.forEach((ele) => {
+      if (taskAssignTo.toLowerCase() == ele.firstName.toLowerCase()) {
+        ele.tasks.push(newTask);
+        // console.log(ele);
+      }
+    });
+    setTaskTitle("");
+    setTaskDescription("");
+    setTaskDate("");
+    setCategory("");
+    setTaskAssignTo("");
   };
   return (
     <div className="p-5 bg-[#1c1c1c] mt-5 rounded">
